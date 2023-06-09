@@ -1,0 +1,21 @@
+<div class="container">
+    <h1>Friend Listing</h1>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone Number</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let friend of friends">
+                <td>{{friend.name}}</td>
+                <td>{{friend.email}}</td>
+                <td>{{friend.phoneNumber}}</td>
+                <td><button class="btn btn-danger" (click)="deleteFriend(friend.email)">Delete</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
